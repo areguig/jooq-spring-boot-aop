@@ -1,0 +1,15 @@
+*.zip
+azalead.github.io
+.idea/
+target/
+/.settings/
+/.classpath
+/.project
+log/
+r-log/
+*.iml
+*.pid
+.DS_Store
+.classpath
+.project
+.settings
