@@ -18,11 +18,9 @@ public class TestAspect {
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 
 
-    @AfterReturning("execution(* org.jooq.example.spring..*.*(..))")
+    @AfterReturning("execution(* org.jooq.example.spring.service..*.*(..))")
     public void logAround(JoinPoint joinPoint) throws Throwable {
-        log.info(">< Execution: {} ", joinPoint.getSignature().toShortString());
-        log.debug("> Enter: {} with argument[s] = {}", joinPoint.getSignature().toShortString(),
+        log.debug("> Enter: {} with argument[s] = {}", joinPoint.getSignature().toLongString(),
                 Arrays.toString(joinPoint.getArgs()));
-
     }
 }
